@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block title %} BASE PAGE {% endblock %}
+  </head>
+  <body>
+    <header>
+      {% with messages = get_flashed_messages() %} 
+      {% for m in messages %} 
+      {{ m }} 
+      {% endfor %} 
+      {% endwith %}
+
+      <h2><b>Login your account</b></h2>
+    </header>
+    <main>{% block content %} {% endblock %}</main>
+    <footer>
+      <p>@copyright</p>
+      <a href="/">help</a>
+      <a href="/">about us </a>
+    </footer>
+  </body>
+</html>
